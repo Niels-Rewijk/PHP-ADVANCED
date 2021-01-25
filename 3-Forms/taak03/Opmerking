@@ -1,1 +1,5 @@
 Kun je nog iets zeg waarom er twee manieren zijn: Get en Post? Wat is het voordeel van Get en wat van Post? In welke situaties gebruik je Get en wanneer Post?
+http://localhost/php-advanced/3-Forms/taak03/mijnmuziek.php?artiest=B%F6kkers&title=annie+uut+de+bochte&jaar=2014&genre=boerenrock&submit=verstuur
+
+post gebruik je als je gegevens ontzichtbaar wilt door sturen
+met get hoeft minder code te typen omgegevens te weergeven
