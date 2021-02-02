@@ -4,8 +4,7 @@
         
         <title>Gegevens</title>
         <style>
-            body{
-            background-color: $_POST["kleur"];}
+            
         </style>
         
     </head>
@@ -27,7 +26,21 @@
         echo "<br>";
         echo "Geslacht is " . $_POST["geslacht"];
         echo "<br>";
-        echo "<body style='background-color:$_POST[kleur]'>";
+        if ($_POST["kleur"] == 'yellow') {
+            echo '<body style="background-color:yellow">';}
+
+        if ($_POST["kleur"] == 'red') {
+            echo '<body style="background-color:red">';}
+        
+        if ($_POST["kleur"] == 'blue') {
+            echo '<body style="background-color:blue">';}
+        
+        if ($_POST["kleur"] == 'green') {
+            echo '<body style="background-color:green">';}
+        
+        if ($_POST["kleur"] == 'purple') {
+            echo '<body style="background-color:purple">';}
+        
         ?>
     </body>
 </html>
