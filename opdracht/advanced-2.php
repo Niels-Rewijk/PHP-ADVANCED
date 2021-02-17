@@ -8,6 +8,10 @@
             border: <?php echo $_POST["dikte"]?>  solid black;
             text-align: left;
             border-spacing: 5px;
+            margin-left: auto;
+            margin-right: auto;
+            border-collapse: collapse;
+            width: 50%;
         }
         </style>
     </head>
@@ -44,14 +48,25 @@
             if ($_POST["kleur"] == 'brown') {
                 echo '<body style="background-color:brown">';}  
             $data = array("Voornaam"=>"Niels", "Achternaam"=>"Rewijk", "Leeftijd"=>"17", "Woonplaats"=>"De Kwakel", "Klas"=>"0C");
+            
         ?>
-        <table>
-            <?php foreach($data as $x => $val):?>
+        <?php function maakrij($value,$key){ ?>
+            <table style="width:50%">
                 <tr>
-                    <td><?php echo "$x";?></td>
-                    <td><?php echo "$val";?></td>
+                    <td> <?php echo "$key";?></td>
+                    <td> <?php echo "$value";?></td>
                 </tr>
-            <?php endforeach;?>
+            </table>
+        <?php } ?> 
+        <table style= "width:50%">
+            <tr>
+                <th>key</th>
+                <th>value</th>
+            </tr>
+        <?php foreach($data as $key => $value):
+                maakrij("$key", "$value");    
+            endforeach;?>
         </table>
     </body>
 </html>
+
