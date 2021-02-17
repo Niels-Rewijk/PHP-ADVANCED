@@ -5,22 +5,39 @@
         <title>advancend-1</title>
     </head>
     <body>
-        
-    <label for="kleuren">kies een tekst kleur:</label>
-            <select name="kleuren" id="kleuren">
-            <option value="red">red</option>
-            <option value="blue">blue</option>
-            <option value="green">green</option>
-            <option value="black">black</option>
-            <option value="brown">brown</option>
-</select>
+    <form name="tabeldikte" action="advanced-2.php"
+        method="post">
         <?php
-            $kleuren = array("red", "blue", "green", "black", "brown");
-            
-            foreach($kleuren as $value): 
-                echo "je tekst kleur is $value<br>";
-            endforeach;
+            $kleuren =["","red", "blue", "green", "black", "brown"];      
         ?>
-        <input type="submit" name="submit" value="verstuur">
-        </body>
+
+    Kies een tekst kleur: <select name="kleuren" id="kleuren">
+                <option value=
+                    <?php   foreach($kleuren as $value)
+                        { 
+                            echo "<option value=\"$value\">$value</option>";
+                        }                   
+                    ?>>
+                </option>          
+            </select>
+
+        <br><br>
+
+    Kies een achtergrond kleur: <select name="kleur" id="kleur">      
+                <option value=
+                    <?php   foreach($kleuren as $value)
+                        { 
+                            // echo "$value[0] <br>" ;
+                            echo "<option value=\"$value\">$value</option>";
+                        }
+                    ?>>
+                </option>          
+            </select>
+
+        <br></br>
+
+            Tabel-border dikte (px): <input type="text" name="dikte" size="2">
+            <input type="submit" name="submit" value="verstuur">
+        </form>
+    </body>
 </html>
